@@ -1,0 +1,422 @@
+@font-face {
+    font-family: minoinPro;
+    src: url(src/mp.ttf);
+}
+
+body{
+
+    font-family: minoinPro;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.menu{
+
+    position: relative;
+    display: inline-block;
+
+}
+
+.menu:link{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.menu:visited{
+
+    color: white;
+
+}
+
+
+#background{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+
+.background{
+
+    /*z-index: -100;*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+
+}
+
+#verticalTitle{
+
+    z-index: 100;
+    position:absolute;
+    font-size: 60pt;
+    color:white;
+    vertical-align: middle;
+    line-height: 100px;
+
+    cursor: crosshair;
+
+
+}
+
+
+#menu{
+
+    /*width: 500px;*/
+    z-index: 10;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 30pt;
+    cursor: crosshair;
+
+}
+
+.bg-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    background: transparent url(pics/bg_pattern_2.png) repeat top left;
+}
+
+.end{
+
+    width: 100%;
+    height: 200px;
+
+    background-color: whitesmoke;
+
+
+}
+
+.endP{
+
+    line-height: 10px;
+    font-size: 15pt;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+.selectLine{
+
+    /*display: none;*/
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    border-bottom: solid white;
+
+}
+
+.black{
+
+    color: black;
+
+}
+
+.white{
+
+    color: white;
+
+}
+
+.blackLine{
+
+    border-bottom: solid black;
+
+}
+
+#leftRowContainer{
+
+    vertical-align: top;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    display: inline-block;
+    /*background-color: red;*/
+    left: 30%;
+    width: 30%;
+    /*height: 200%;*/
+
+}
+
+#rightRowContainer{
+
+    vertical-align: top;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: inline-block;
+    /*background-color: blue;*/
+    width: 30%;
+    /*height: 200%;*/
+
+}
+
+.projectBlock{
+
+
+    margin-top: 50px;
+    cursor: crosshair;
+
+}
+
+.projectImg{
+
+    width: 100%;
+    position: relative;
+
+}
+
+.projectTitle{
+
+    position: relative;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20pt;
+    margin-right: 5px;
+
+}
+
+.inline{
+
+    display: inline-block;
+}
+
+.projectInfo{
+
+
+
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20pt;
+    margin-right: 5px;
+
+}
+
+.projectDes{
+
+    font-size: 20pt;
+    margin-right: 5px;
+
+}
+
+
+
+.mask{
+
+
+    /*background-color: darkgray;*/
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 98.8%;
+    opacity: 0;
+
+
+}
+
+.maskColor{
+
+
+    background-color: black;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+
+
+}
+
+.maskText{
+
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: table-cell;
+    vertical-align: bottom;
+    text-align: center;
+    font-size: 30pt;
+
+}
+
+.detailContainer{
+
+    position: relative;
+    margin-top:10%;
+    left:10%;
+    width: 80%;
+
+}
+
+.detailProject{
+
+    font-size: 60pt;
+    font-style: italic;
+
+}
+
+.detailTextContainer{
+
+    margin-top: 3%;
+    margin-bottom: 5%;
+    position: relative;
+    width: 60%;
+
+}
+.yearContainer{
+
+    position: absolute;
+    right: 1%;
+
+
+
+}
+
+
+.yearText{
+
+    position: relative;
+    font-size: 40pt;
+    /*font-family: "Agency FB";*/
+    text-align: right;
+    line-height: 40pt;
+
+}
+
+
+.fixLine{
+
+    /*display: none;*/
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    /*height: 50%;*/
+    /*border-top: solid black;*/
+    border-bottom: solid black;
+
+}
+
+.detailImageContainer{
+
+    margin-top: 3%;
+    position: relative;
+
+}
+
+.detailImage{
+
+    width: 100%;
+
+
+}
+
+.detailTitle{
+
+    margin-top: 3%;
+    font-size: 30pt;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+.detailText{
+
+    /*font-weight: bold;*/
+    font-size: 20pt;
+
+}
+
+.button{
+
+    position: absolute;
+
+    top:45%;
+    width: 4%;
+
+}
+
+.left{
+
+    left: -5%;
+    cursor: crosshair;
+
+}
+
+.right{
+
+    right: -5%;
+    cursor: crosshair;
+
+}
+
+
+.titleContainer{
+
+    /*background-color: red;*/
+    position: fixed;
+    right: 90%;
+    top: 10%;
+    cursor: crosshair;
+    z-index: 99;
+
+}
+
+.titleText{
+
+    white-space: nowrap;
+    font-size: 60pt;
+    transform: rotate(-90deg);
+    transform-origin: right bottom 0;
+    vertical-align: middle;
+
+}
+
+.titleCube{
+
+
+    transform : rotate(-90deg);
+    width:60px;
+
+
+}
+
+
+.load{
+
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #FAFAFA;
+
+    z-index: 999;
+
+
+}
+
+.loadImg{
+
+    position: fixed;
+    width: 10%;
+    left: 45%;
+
+    top: 36%;
+
+}

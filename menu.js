@@ -65,7 +65,7 @@ $('.scrollUpCube').click(function () {
 function goto(url) {
 
     $('.load').fadeIn(500);
-    $('.verticalTitle').animate({left:'-30%'},200);
+    $('.titleContainer').animate({right:'100%'},1000);
     $('#menu').animate({top:'-10%'},1000);
     setTimeout(function () {
 

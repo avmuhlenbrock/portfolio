@@ -259,6 +259,7 @@ body{
 
     position: relative;
     margin-top:10%;
+    margin-bottom: 5%;
     left:10%;
     width: 80%;
 
@@ -273,17 +274,17 @@ body{
 
 .detailTextContainer{
 
-    margin-top: 3%;
+    /*margin-top: 5%;*/
     margin-bottom: 5%;
     position: relative;
     width: 60%;
+    vertical-align: top;
 
 }
 .yearContainer{
 
     position: absolute;
     right: 1%;
-
 
 
 }
@@ -314,13 +315,15 @@ body{
 
 .detailImageContainer{
 
-    margin-top: 3%;
+    margin-top: 2%;
     position: relative;
+    vertical-align: top;
 
 }
 
 .detailImage{
 
+    /*position: relative;*/
     width: 100%;
 
 
@@ -449,7 +452,7 @@ body{
 .scrollUpCube{
 
     cursor: crosshair;
-    width: 4%;
+    width: 3.2%;
 
 
 }

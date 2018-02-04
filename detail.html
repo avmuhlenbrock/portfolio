@@ -35,25 +35,19 @@
 
     <div class="detailImageContainer">
 
+        <video id="detailVideo" style="width: 100%; display: none;top: 0;" controls> <source src="" type="video/mp4"> </video>
         <img class="detailImage" src="pics/detail/0/0.jpg">
-        <img src="pics/Cube.png" class="button left">
-        <img src="pics/Cube.png" class="button right">
 
-        <div class="yearContainer"><div class="yearText">20<div class="fixLine"></div></div><div class="yearText">17<div class="fixLine"></div></div></div>
-
-    </div>
-
-
-    <div class="detailTextContainer">
-
-        <!--<div class="detailTitle">About</div>-->
-        <!--<div id="text1" class="detailText"></div>-->
-        <!--<div class="detailTitle">Execution</div>-->
-        <!--<div id="text2" class="detailText"></div>-->
-        <!--<div class="detailTitle">Programs Used</div>-->
-        <!--<div id="text3" class="detailText"></div>-->
+        <img src="pics/Cube.png" class="button left horizontalButton">
+        <img src="pics/Cube.png" class="button right horizontalButton">
 
     </div>
+
+    <div class="yearContainer"><div class="yearText">20<div class="fixLine"></div></div><div id="year" class="yearText">17<div class="fixLine"></div></div></div>
+    <div class="detailTextContainer"></div>
+
+    <img src="pics/Cube.png" class="button left verticalButton">
+    <img src="pics/Cube.png" class="button right verticalButton">
 
 </div>
 
@@ -90,14 +84,33 @@
     var projectNum = getUrlParameter('projectNum') || 0;
     var detailNum = getUrlParameter('detailNum') || 0;
 
-    $(".detailImage").attr("src","pics/detail/"+projectNum+"/"+detailNum+".jpg");
+    var dataDetail;
+
+
+
+    var detailImage =  $(".detailImage");
+
+    detailImage.attr("src","pics/detail/"+projectNum+"/"+detailNum+".jpg");
+
+    detailImage.one("load", function() {
+
+        console.log( detailImage.width(),detailImage.height());
+
+        verticleLayOut(detailImage.width()/detailImage.height() < 1);
+
+        detailImage.animate({'opacity':1},500);
+
+    });
 
     $.get('pics/detail/detail.json',function (data) {
 
         console.log(data);
 
-        $('.detailProject').text(data.detail[projectNum]['Name']);
+        dataDetail = data.detail;
 
+        $('.detailProject').text(data.detail[projectNum]['Name']);
+        $('#year').text(data.detail[projectNum]['Year']);
+        $('#year').append('<div class="fixLine">');
 
 
         appendDetail('About');
@@ -161,7 +174,7 @@
 
     var rotate;
 
-    $('.left').fadeOut();
+//    $('.left').fadeOut();
 
     $('.left').mouseenter(function () {
 
@@ -201,19 +214,17 @@
         var detailImage = $(".detailImage");
         detailImage.animate({'opacity':0},500,function () {
 
-            detailImage.attr("src","pics/detail/"+projectNum+"/"+(--detailNum)+".jpg");
-            if(detailNum<=0) $('.left').fadeOut();
+            detailNum = (detailNum-1+dataDetail[projectNum]['Files'].length)%dataDetail[projectNum]['Files'].length;
+            getImage(detailNum);
+//            if(detailNum<=0) $('.left').fadeOut();
+//            if(detailNum<dataDetail[projectNum]['Files'].length-1) $('.right').fadeIn();
             lock = false;
 
         });
 
 
         detailImage.one("load", function() {
-            detailImage.animate({'opacity':1},500,function () {
-
-
-
-            });
+            detailImage.animate({'opacity':1},500);
         });
 
 
@@ -237,24 +248,70 @@
         var detailImage = $(".detailImage");
         detailImage.animate({'opacity':0},500,function () {
 
-            detailImage.attr("src","pics/detail/"+projectNum+"/"+(++detailNum)+".jpg");
-            if(detailNum>0) $('.left').fadeIn();
+            detailNum = (detailNum+1+dataDetail[projectNum]['Files'].length)%dataDetail[projectNum]['Files'].length;
+            getImage(detailNum);
+//            if(detailNum>0) $('.left').fadeIn();
+//            if(detailNum>=dataDetail[projectNum]['Files'].length-1) $('.right').fadeOut();
             lock = false;
 
         });
 
 
-        detailImage.one("load", function() {
-            detailImage.animate({'opacity':1},500,function () {
 
-
-
-            });
-        });
 
 
 
     });
+
+    function getImage(i) {
+        console.log(i);
+
+        var detailImage = $('.detailImage');
+
+        var filename = dataDetail[projectNum]['Files'][i];
+        if(filename.split('.').pop()==='mp4'){
+
+            console.log('load video',i);
+
+            $('.detailImage').hide();
+            $('#detailVideo').show();
+
+            var video = $('#detailVideo')[0];
+            video.src = "pics/detail/"+projectNum+"/"+filename;
+            video.load();
+            video.play();
+
+            setTimeout(verticleLayOut,100);
+
+
+        }else{
+
+            console.log('load image',i);
+            detailImage.attr("src","pics/detail/"+projectNum+"/"+filename);
+            $('#detailVideo').hide();
+            detailImage.show();
+
+            $('#detailVideo')[0].pause();
+
+
+
+            detailImage.one("load", function() {
+
+                console.log( detailImage.width(),detailImage.height());
+
+                verticleLayOut(detailImage.width()/detailImage.height() < 1);
+
+                detailImage.animate({'opacity':1},500);
+
+            });
+
+        }
+
+
+
+
+
+    }
 
     function rotateAnime(obj,target,current,time) {
 
@@ -269,6 +326,39 @@
 
     }
 
+
+    function verticleLayOut(verticle) {
+
+        if(verticle){
+
+            $('.detailImageContainer').css({'width':'50%','display':'inline-block'});
+            $('.detailTextContainer').css({'width':'40%','display':'inline-block','left':'5%'});
+
+            var yearWidth = $('.yearText').width();
+            $('.yearContainer').css({'top':'100%','left':0,'right':'','width':yearWidth});
+            $('.yearText').css({'text-align':'left'});
+
+            $('.verticalButton').show();
+            $('.horizontalButton').hide();
+
+        }else{
+
+            $('.detailImageContainer').css({'width':'100%','display':''});
+            $('.detailTextContainer').css({'width':'60%','display':'','left':''});
+
+            var yearWidth = $('.yearText').width();
+            $('.yearContainer').css({'top':'','right':0,'left':'','width':yearWidth});
+            $('.yearText').css({'text-align':'right'});
+
+            $('.verticalButton').hide();
+            $('.horizontalButton').show();
+
+        }
+
+
+
+
+    }
 
 
 

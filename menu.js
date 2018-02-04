@@ -100,6 +100,7 @@ function adapt() {
         $('.yearText').css({'font-size':'40pt','line-height':'30pt'});
         $('.detailProject').css({'font-size':'40pt'});
 
+
     }else{
 
 

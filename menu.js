@@ -49,6 +49,19 @@ $('.selectLine').each(function () {
 
 });
 
+
+$('.scrollUpCube').click(function () {
+
+    console.log('top',window.pageYOffset);
+
+    spin(1000);
+    setTimeout(function () {
+        scrollUp(500);
+    },1000)
+
+});
+
+
 function goto(url) {
 
     $('.load').fadeIn(500);
@@ -120,3 +133,53 @@ $( window ).resize(function() {
     adapt()
 });
 
+
+function scrollUp(time) {
+
+    var scale = window.pageYOffset;
+
+    var now = 1;
+
+    var sc = setInterval(function () {
+
+        now -= 10/time;
+
+        var pos = (1-Math.cos(now*Math.PI/2))*scale;
+
+        window.scrollTo(0,pos);
+        if(now <=0) clearInterval(sc);
+
+    },10)
+
+
+}
+
+function spin(time) {
+
+    var cube = $('.scrollUpCube');
+
+    var now = 0;
+
+    var speed = 0;
+
+    var angle = 0;
+
+    var sp = setInterval(function () {
+
+        now += 10/time;
+
+        angle += (speed++)*0.4/Math.PI;
+
+        cube.css({'transform': 'rotate('+angle+'deg)'});
+
+        if(now >=1) {
+
+            clearInterval(sp);
+            cube.css({'transform': 'rotate('+0+'deg)'});
+
+        }
+
+    },10)
+
+
+}

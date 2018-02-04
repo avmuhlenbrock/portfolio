@@ -93,7 +93,7 @@ body{
 .end{
 
     width: 100%;
-    height: 200px;
+    height: 300px;
 
     background-color: whitesmoke;
 
@@ -430,5 +430,26 @@ body{
     left: 45%;
 
     top: 36%;
+
+}
+
+.scrollUpContainer{
+
+    position: relative;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20pt;
+
+
+}
+
+.scrollUpCube{
+
+    cursor: crosshair;
+    width: 4%;
+
 
 }

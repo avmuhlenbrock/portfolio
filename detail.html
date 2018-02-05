@@ -100,23 +100,27 @@
 
     var detailImage =  $(".detailImage");
 
-    detailImage.attr("src","pics/detail/"+projectNum+"/"+detailNum+".jpg");
 
-    detailImage.one("load", function() {
-
-        console.log( detailImage.width(),detailImage.height());
-
-        verticleLayOut(detailImage.width()/detailImage.height() < 1);
-
-        detailImage.animate({'opacity':1},500);
-
-    });
 
     $.get('pics/detail/detail.json',function (data) {
 
         console.log(data);
 
         dataDetail = data.detail;
+
+
+        getImage(0);
+
+        detailImage.one("load", function() {
+
+            console.log( detailImage.width(),detailImage.height());
+
+            verticleLayOut(detailImage.width()/detailImage.height() < 1);
+
+            detailImage.animate({'opacity':1},500);
+
+        });
+
 
         $('.detailProject').text(data.detail[projectNum]['Name']);
         $('#year').text(data.detail[projectNum]['Year']);

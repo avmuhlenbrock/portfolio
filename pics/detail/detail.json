@@ -8,7 +8,7 @@
       "Execution": ["Design Process","Visualization"],
       "Programs Used": ["Rhino 3D Modelling","Cinema 4D","Octane Renderer","Photoshop CC"],
       "Year": 17,
-      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg"]
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"]
 
     },{
       "Name": "GLOWING GARDEN  Hush Studios",
@@ -16,7 +16,7 @@
       "Execution": ["Design Process","Visualization"],
       "Programs Used": ["Rhino 3D Modelling","Grasshopper","Octane Renderer","Photoshop CC"],
       "Year": 17,
-      "Files":["0.jpg","1.jpg","2.gif","3.jpg","4.jpg","5.gif","6.jpg","7.jpg"]
+      "Files":["0.gif","1.jpg","2.jpg","3.gif","4.jpg","5.jpg","6.gif","7.jpg","8.jpg"]
 
     },{
       "Name": "PROJECT S. Hush Studios",
@@ -43,7 +43,7 @@
       "Execution": ["Design Process","Animation"],
       "Programs Used": ["Maya 3D","Processing","Arduino","Vray","Photoshop CC"],
       "Year": 16,
-      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.mp4","13.mp4"],
+      "Files":["0.mp4","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.mp4","8.mp4","9.mp4","10.mp4","11.jpg","12.jpg","13.jpg","14.mp4","15.jpg","16.jpg","17.jpg","18.jpg","19.jpg","20.jpg","21.mp4","22.mp4"],
       "Detail": ["The units are formed by a 3 by 3, 27 voxel organism, where each voxel posses the multi materiality condition with the capacity to direct graduated strategies of actuation in a expanded, contracted, rigid or neutral combination of states, that give us the possibility to attempt a dynamic system that can respond to changes through self-awareness, mobility and softness where every unit could reconfigure themselves in order to transform into a determined structure."]
     },{
       "Name": "RENATO POBLETE PARK Ministry Public Buildings",
@@ -86,7 +86,7 @@
       "Location": "Silicon Valley California USA",
       "Programs Used": ["Rhino 3D Modelling","Grasshopper","Octane Renderer","Photoshop CC"],
       "Year": 17,
-      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg"]
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.gif","10.mp4","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.mp4","19.jpg","20.jpg"]
 
     },{
       "Name": "PROJECT L.  Hush Studios",
@@ -95,7 +95,7 @@
       "Execution": ["Visualization"],
       "Programs Used": ["Rhino 3D Modelling","Grasshopper","Octane Renderer","Photoshop CC"],
       "Year": 17,
-      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"]
+      "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"]
 
     },{
       "Name": "PROJECT VOLO  Hush Studios",
@@ -104,7 +104,7 @@
       "Execution": ["Design Process","Visualization","Sculpture Making"],
       "Programs Used": ["Rhino 3D Modelling","After Effects","Octane Renderer","Photoshop CC"],
       "Year": 17,
-      "Files":["0.jpg","1.jpg","2.jpg","3.jpg"]
+      "Files":["0.mp4","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","11.jpg"]
 
     },{
       "Name": "EMOTIVE CITY Minimaforms",
@@ -113,8 +113,8 @@
       "Execution": ["Spherebot /Installation"],
       "Programs Used": ["Rhino 3D Modelling","Arduino"],
       "Year": 16,
-      "Files":["0.jpg","1.jpg","3.jpg","4.jpg"],
-      "Detail":"The exhibition from Minimaforms called «Emotive City», is a paskian construction performed for «FutureFest», a festival organized by Nesta in Vinopolis 2015. This project was designed by Stephen Spyropoulos and Theodore Spyropoulos. It is an installation that consists of a main structure, positioned in the center of a stationary ground, where it is controlled and regulated according to the situation of a number of semi-autonomous sphere-bots. The sphere-bots are wandering around the main structure and interacts between themselves and with the visitors who are able to affect and contribute to the whole system. Each sphere-bot contains a signal device that according to the behavior and his variable set of emotions that he is experiencing, sends a particular message through a wire-less digital camera that is hanged in the upper part of the installation. The camera who is constantly detecting and capturing each emotion from the sphere-bots, returns the «emotive signal» into the main center structure, where from there, affects the aesthetic representation of the model. The representation turns into an «animated strategy» and beautiful composition of colors [white, yellow, red, blue] that somehow evoke a new kind of regulation within the whole system."
+      "Files":["0.jpg","1.jpg","3.jpg","4.jpg","5.mp4"],
+      "Detail":["The exhibition from Minimaforms called «Emotive City», is a paskian construction performed for «FutureFest», a festival organized by Nesta in Vinopolis 2015. This project was designed by Stephen Spyropoulos and Theodore Spyropoulos. It is an installation that consists of a main structure, positioned in the center of a stationary ground, where it is controlled and regulated according to the situation of a number of semi-autonomous sphere-bots. The sphere-bots are wandering around the main structure and interacts between themselves and with the visitors who are able to affect and contribute to the whole system. Each sphere-bot contains a signal device that according to the behavior and his variable set of emotions that he is experiencing, sends a particular message through a wire-less digital camera that is hanged in the upper part of the installation. The camera who is constantly detecting and capturing each emotion from the sphere-bots, returns the «emotive signal» into the main center structure, where from there, affects the aesthetic representation of the model. The representation turns into an «animated strategy» and beautiful composition of colors [white, yellow, red, blue] that somehow evoke a new kind of regulation within the whole system."]
 
     },{
       "Name": "ENCODED MATTER AADRL",
@@ -124,7 +124,7 @@
       "Programs Used": ["CNC Milling","Arduino","Processing"],
       "Year": 15,
       "Files":["0.jpg","1.jpg","2.jpg","3.jpg"],
-      "Detail": "This workshop consisted in experimenting with the output result between computational systems [Processing simulations] and a CNC milling machine with localised sensors in a real time feedback stimulation. All this in order to find new design techniques as a speculative process of  experimenting with a real feedback loop between the virtual world and the physical world. Through the process of playing with the different set of variables of an abstract agent running in the program, which was connected to the milling machine, it starts to emulate the same behaviours from the program. Afterwards, it receive additional data from sensors added to the milling tool which attempt against the variables stated from the program, giving as consequence an unpredicted shape that can compromise depth, hight or direction of the current tool. "
+      "Detail": ["This workshop consisted in experimenting with the output result between computational systems [Processing simulations] and a CNC milling machine with localised sensors in a real time feedback stimulation. All this in order to find new design techniques as a speculative process of  experimenting with a real feedback loop between the virtual world and the physical world. Through the process of playing with the different set of variables of an abstract agent running in the program, which was connected to the milling machine, it starts to emulate the same behaviours from the program. Afterwards, it receive additional data from sensors added to the milling tool which attempt against the variables stated from the program, giving as consequence an unpredicted shape that can compromise depth, hight or direction of the current tool. "]
 
     },{
       "Name": "MONEDA BICENTENARIO BUILDING Ministry Public Buildings",

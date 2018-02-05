@@ -171,7 +171,6 @@
 
             if(data.detail[projectNum][key]){
 
-
                 $('.detailTextContainer').append(' <div class="detailTitle">'+key+'</div>');
                 $('.detailTextContainer').append('<div class="detailText">'+data.detail[projectNum][key]+'</div>');
 
@@ -325,7 +324,10 @@
 
           $('.detailTextContainer').children().each(function () {
 
+              var detailToShow = (i-1)<=dataDetail[projectNum]['Detail'].length-1? i-1:dataDetail[projectNum]['Detail'].length-1;
+
               $(this).hide();
+              $('#additionalDescription').text(dataDetail[projectNum]['Detail'][detailToShow]);
               $('#additionalDescription').show();
 
           });

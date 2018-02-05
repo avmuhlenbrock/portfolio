@@ -99,7 +99,6 @@ $('#contact').click(function () {
 
 });
 
-adapt();
 
 function adapt() {
 
@@ -110,9 +109,13 @@ function adapt() {
         $('#menu').css({'font-size':'20pt'});
         $('.detailTitle').css({'font-size':'20pt'});
         $('.detailText').css({'font-size':'14pt'});
-        $('.yearText').css({'font-size':'40pt','line-height':'30pt'});
+        $('.yearText').css({'font-size':'40pt','line-height':'40pt'});
         $('.detailProject').css({'font-size':'40pt'});
 
+        $('.maskText').css({'font-size':'20pt'});
+        $('.projectTitle').css({'font-size':'20pt'});
+        $('.projectInfo').css({'font-size':'20pt'});
+        $('.projectDes').css({'font-size':'14pt'});
 
     }else{
 
@@ -122,12 +125,20 @@ function adapt() {
         $('#menu').css({'font-size':'30pt'});
         $('.detailTitle').css({'font-size':'30pt'});
         $('.detailText').css({'font-size':'20pt'});
-        $('.yearText').css({'font-size':'60pt','line-height':'48pt'});
+        $('.yearText').css({'font-size':'60pt','line-height':'60pt'});
         $('.detailProject').css({'font-size':'60pt'});
 
+        $('.maskText').css({'font-size':'30pt'});
+        $('.projectTitle').css({'font-size':'30pt'});
+        $('.projectInfo').css({'font-size':'30pt'});
+        $('.projectDes').css({'font-size':'20pt'});
     }
 
 }
+
+$( document ).ready(function() {
+    adapt()
+});
 
 $( window ).resize(function() {
     adapt()

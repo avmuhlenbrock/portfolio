@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Detail</title>
+    <title>AvMS</title>
     <link rel="stylesheet" href="avm.css">
     <style>
 
@@ -15,6 +15,15 @@
         }
 
     </style>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -41,9 +50,10 @@
         <img src="pics/Cube.png" class="button left horizontalButton">
         <img src="pics/Cube.png" class="button right horizontalButton">
 
+        <div class="yearContainer"><div class="yearText">20<div class="fixLine"></div></div><div id="year" class="yearText">17<div class="fixLine"></div></div></div>
     </div>
 
-    <div class="yearContainer"><div class="yearText">20<div class="fixLine"></div></div><div id="year" class="yearText">17<div class="fixLine"></div></div></div>
+
     <div class="detailTextContainer"></div>
 
     <img src="pics/Cube.png" class="button left verticalButton">
@@ -153,7 +163,9 @@
 
 
 
-        appendDetail('Detail');
+        //appendDetail('Detail');
+        $('.detailTextContainer').append('<div id="additionalDescription" class="detailText">'+data.detail[projectNum]['Detail']+'</div>');
+        $('#additionalDescription').hide();
 
         function appendDetail(key) {
 
@@ -309,6 +321,31 @@
 
 
 
+        if(i>0 && dataDetail[projectNum]['Detail']){
+
+          $('.detailTextContainer').children().each(function () {
+
+              $(this).hide();
+              $('#additionalDescription').show();
+
+          });
+
+
+        }else{
+
+            $('.detailTextContainer').children().each(function () {
+
+                $(this).show();
+                $('#additionalDescription').hide();
+
+            });
+
+
+
+        }
+
+
+
 
 
     }
@@ -332,7 +369,7 @@
         if(verticle){
 
             $('.detailImageContainer').css({'width':'50%','display':'inline-block'});
-            $('.detailTextContainer').css({'width':'40%','display':'inline-block','left':'5%'});
+            $('.detailTextContainer').css({'width':'40%','display':'inline-block','left':'5%','margin-top':'1%'});
 
             var yearWidth = $('.yearText').width();
             $('.yearContainer').css({'top':'100%','left':0,'right':'','width':yearWidth});
@@ -344,7 +381,7 @@
         }else{
 
             $('.detailImageContainer').css({'width':'100%','display':''});
-            $('.detailTextContainer').css({'width':'60%','display':'','left':''});
+            $('.detailTextContainer').css({'width':'60%','display':'','left':'','margin-top':'12%'});
 
             var yearWidth = $('.yearText').width();
             $('.yearContainer').css({'top':'','right':0,'left':'','width':yearWidth});

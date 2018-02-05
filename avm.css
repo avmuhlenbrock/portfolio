@@ -244,7 +244,7 @@ body{
 .maskText{
 
     position: absolute;
-    top: 45%;
+    top: 40%;
     width: 100%;
     height: 100%;
     color: white;
@@ -296,7 +296,7 @@ body{
     font-size: 40pt;
     /*font-family: "Agency FB";*/
     text-align: right;
-    line-height: 40pt;
+    /*height: 60pt;*/
 
 }
 
@@ -440,7 +440,7 @@ body{
 
     position: relative;
     text-align: center;
-    margin-top: 1%;
+    margin-top: 10%;
     margin-bottom: 1%;
     font-style: italic;
     font-weight: bold;

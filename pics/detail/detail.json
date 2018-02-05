@@ -11,8 +11,8 @@
       "Files":["0.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"]
 
     },{
-      "Name": "GLOWING GARDEN  Hush Studios",
-      "About": "Office installation situated in Silicon Valley where users can interact with a grid arrangement of 3500 lights bulbs hanged from the ceiling. By selecting an emotion option through a multi touch screen, the lights will play different on-off patterns.",
+      "Name": "ILLUMINATION TESTS  Hush Studios",
+      "About": "Illumination test experiments made in Hush Studios.",
       "Execution": ["Design Process","Visualization"],
       "Programs Used": ["Rhino 3D Modelling","Grasshopper","Octane Renderer","Photoshop CC"],
       "Year": 17,

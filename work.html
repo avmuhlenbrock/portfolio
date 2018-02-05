@@ -93,7 +93,10 @@
         }
 
 
+
         projects.forEach(function (p,n) {
+
+            if(n===2 || n===9 ||n===10) p.hide();
 
             var imageContainer = p.find('.projectImg');
             imageContainer.append('<img src="pics/work/'+n+'.jpg" style="width:100%; position: relative; visibility: hidden;">');

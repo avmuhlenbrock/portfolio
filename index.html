@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AvM</title>
+    <title>AvMS</title>
     <link rel="stylesheet" href="avm.css">
     <style>
 
         body{
 
             overflow: hidden;
+            background-color: black;
 
         }
     </style>
@@ -58,7 +59,7 @@
 
 
 
-    for(var i=0; i<=7;i++){
+    for(var i=0; i<=8;i++){
 
 
         background.append('<div id="background_'+i+'" class="background"></div>');
@@ -81,6 +82,12 @@
         if(i==7){
 
             imgs[i].append('<video id="video0" width="100%" style="z-index: -100;"> <source src="pics/7.mp4" type="video/mp4"> </video>');
+
+        }
+
+        if(i==8){
+
+            imgs[i].append('<video id="video1" width="100%" style="z-index: -100;"> <source src="pics/8.mp4" type="video/mp4"> </video>');
 
         }
 
@@ -157,7 +164,12 @@
                 $('#video0').get(0).play();
                 scaleSpeed = 0.0001
 
-            }else scaleSpeed = 0.0002
+            }else if(currentPic ==8) {
+
+                $('#video1').get(0).play();
+                scaleSpeed = 0.0001
+
+            }else scaleSpeed = 0.0002;
 
 
 

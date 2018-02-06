@@ -68,8 +68,8 @@ function goto(url) {
     $('.titleContainer').animate({right:'100%'},1000);
     $('#menu').animate({top:'-10%'},1000);
     setTimeout(function () {
-
-        window.location.replace(url)
+        window.location.href = url
+        //window.location.replace(url)
 
     },1000)
 
@@ -95,7 +95,7 @@ $('#work').click(function () {
 
 $('#contact').click(function () {
 
-    goto('contact.html')
+    goto('Resume__AvM.pdf')
 
 });
 
@@ -145,9 +145,11 @@ $( window ).resize(function() {
 });
 
 
-function scrollUp(time) {
+function scrollUp(time,to,cb) {
 
-    var scale = window.pageYOffset;
+    to = to || 0;
+
+    var scale = window.pageYOffset-to;
 
     var now = 1;
 
@@ -155,10 +157,15 @@ function scrollUp(time) {
 
         now -= 10/time;
 
-        var pos = (1-Math.cos(now*Math.PI/2))*scale;
+        var pos = (1-Math.cos(now*Math.PI/2))*scale+to;
 
         window.scrollTo(0,pos);
-        if(now <=0) clearInterval(sc);
+        if(now <=0) {
+
+            clearInterval(sc);
+            if(cb) cb();
+
+        }
 
     },10)
 

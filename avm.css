@@ -294,7 +294,7 @@ body{
 
     position: relative;
     font-size: 40pt;
-    /*font-family: "Agency FB";*/
+    font-family: "Gill Sans MT";
     text-align: right;
     /*height: 60pt;*/
 
@@ -454,5 +454,36 @@ body{
     cursor: crosshair;
     width: 3.2%;
 
+
+}
+
+.aboutContainer{
+
+    position: relative;
+    margin-top: 8%;
+    /*height: 1000px;*/
+    left: 15%;
+    width: 70%;
+
+
+}
+
+.aboutVideoContainer{
+
+    position: relative;
+
+
+
+}
+
+.aboutTextContainer{
+
+
+    width: 50%;
+    position: relative;
+    font-size: 18pt;
+    font-family: Arial;
+    font-weight:normal;
+    line-height: 16pt;
 
 }

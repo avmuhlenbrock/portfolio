@@ -51,7 +51,7 @@
 
     <div class="aboutVideoContainer">
         <video id="aboutVideo2" width="100%" style="position: absolute;z-index: -100" loop>
-            <source src="pics/about1.mp4" type="video/mp4">
+            <source src="pics/about2.mp4" type="video/mp4">
         </video>
         <video id="aboutVideo1" width="100%" onended="playNext()" style="z-index: 100">
             <source src="pics/about1.mp4" type="video/mp4">
@@ -126,7 +126,7 @@
 
     function playNext() {
 
-        $("#aboutVideo1").animate({opacity:0});
+        $("#aboutVideo1").animate({opacity:0},2000);
         $("#aboutVideo2")[0].play();
 
     }
